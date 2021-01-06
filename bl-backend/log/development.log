@@ -18,3 +18,17 @@ Migrating to CreateThings (20210106024928)
   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBucket Create (0.5ms)[0m  [1m[32mINSERT INTO "buckets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Travel"], ["created_at", "2021-01-06 03:06:58.401943"], ["updated_at", "2021-01-06 03:06:58.401943"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("description", "bucket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Visit Maldives"], ["bucket_id", 1], ["created_at", "2021-01-06 03:06:58.447264"], ["updated_at", "2021-01-06 03:06:58.447264"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mThing Create (0.2ms)[0m  [1m[32mINSERT INTO "things" ("description", "bucket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Explore the islands of Hawaii"], ["bucket_id", 1], ["created_at", "2021-01-06 03:06:58.451848"], ["updated_at", "2021-01-06 03:06:58.451848"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m

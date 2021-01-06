@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Bucket.create(name: "Travel")
+
+Thing.create(description: "Visit Maldives", bucket_id: 1)
+Thing.create(description: "Explore the islands of Hawaii", bucket_id: 1)
