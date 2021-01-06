@@ -117,3 +117,278 @@ Processing by BucketsController#index as HTML
 Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 2696)
 
 
+Started GET "/buckets" for ::1 at 2021-01-06 12:26:32 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.68ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 1.4ms | Allocations: 15854)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:33:05 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2722)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:33:56 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.91ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2696)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:35:06 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.87ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 2696)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:35:26 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2696)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:35:39 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.62ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2677)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:45:28 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.81ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 2708)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 12:45:30 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (3.52ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2420)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:45:34 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.95ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2677)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:48:02 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2677)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:48:23 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.98ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2677)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 12:48:24 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (3.04ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 2285)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:50:29 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 2677)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 12:50:30 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2285)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:55:52 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.9ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 2708)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 12:55:54 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.4ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (5.02ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 2298)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:56:20 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.79ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 2677)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 12:56:22 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (3.63ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2285)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 12:56:39 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.94ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 2677)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 12:56:40 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (4.55ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 2285)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 13:04:58 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.58ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2708)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 13:05:01 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 2298)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 13:05:28 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.51ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2677)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 13:05:29 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.2ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (5.88ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 2285)
+
+
+Started GET "/buckets" for ::1 at 2021-01-06 13:05:43 -0800
+Processing by BucketsController#index as */*
+  [1m[36mBucket Load (0.1ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets"[0m
+  ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mThing Load (0.1ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.82ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 2677)
+
+
+Started GET "/buckets/1" for ::1 at 2021-01-06 13:05:45 -0800
+Processing by BucketsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBucket Load (0.3ms)[0m  [1m[34mSELECT "buckets".* FROM "buckets" WHERE "buckets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/buckets_controller.rb:44:in `set_bucket'
+[active_model_serializers]   [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."bucket_id" = ?[0m  [["bucket_id", 1]]
+[active_model_serializers]   ↳ app/controllers/buckets_controller.rb:13:in `show'
+[active_model_serializers] Rendered BucketSerializer with ActiveModelSerializers::Adapter::Attributes (17.74ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.5ms | Allocations: 2288)
+
+
