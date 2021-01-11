@@ -47,6 +47,7 @@ function createBucket(e) {
         <br>
         <li>
         <a href="#" data-id="${bucket.id}">${bucket.name}</a>
+        - <button class="delete-bucket" data-id="${bucket.id}">Delete List</button>
         </li>
         `
         attachClicksToLinks()
@@ -69,6 +70,7 @@ function getBuckets() {
         <br>
         <li>
         <a href="#" data-id="${bucket.id}">${bucket.name}</a>
+        - <button class="delete-bucket" data-id="${bucket.id}">Delete List</button>
         </li>
         ` 
         })
@@ -90,10 +92,14 @@ function attachClicksToLinks() {
     buckets.forEach(bucket => {
         bucket.addEventListener('click', displayBucket)
     })
+    let buttons = document.querySelectorAll(".delete-bucket")
+    buttons.forEach(btn => {
+        btn.addEventListener('click', removeBucket)
+    })
 }
 
 function attachClicksToButtons() {
-    let things = document.querySelectorAll("button")
+    let things = document.querySelectorAll(".delete-thing")
     things.forEach(thing => {
         thing.addEventListener('click', removeThing)
     })
@@ -109,30 +115,27 @@ function displayBucket(e) {
     .then(bucket => {
         main.innerHTML = `
         <h3>${bucket.name}:</h3>
-        <button id="delete-bucket" data-id="${bucket.id}">Delete List</button>
-        <br>
+        
         <br>
         <a href="#" id="thing-form" data-id="${bucket.id}">Add to List</a>
         <div id="thing-form"></div>
         <br>
-        `        
+        `
+        //document.getElementById('delete-bucket').addEventListener('click', removeBucket)        
         bucket.things.forEach( thing => {
             main.innerHTML += `
             <li >${thing.description}
-             - <button id="delete-thing" data-id="${thing.id}">Remove</button>
+             - <button class="delete-thing" data-id="${thing.id}">Remove</button>
             </li>
-            <br>
-            `
-        }
-        )
-        attachClicksToLinks()
+            `  
+        })
         attachClicksToButtons()
-        document.getElementById('delete-bucket').addEventListener('click', removeBucket)
         document.getElementById('thing-form').addEventListener('click', displayCreateThingForm)
     })
 }
 
 function removeBucket(e) {
+    console.log(e.target)
     let configObj = {
         method: 'DELETE',
         headers: {
@@ -147,7 +150,8 @@ function removeBucket(e) {
 }
 
 function removeThing(e) {
-    let bucketI = e.target.dataset.bucketNum
+    console.log(e.target)
+    let thingId = e.target.dataset.id
     let configObj = {
         method: 'DELETE',
         headers: {
@@ -155,10 +159,15 @@ function removeThing(e) {
             'Accept': 'application/json'
         }
     }
-    fetch(BASE_URL + `/things/${e.target.dataset.id}`, configObj)
+    fetch(BASE_URL + `/things/${thingId}`, configObj)
     .then(() => {
-        displayBucket(bucketI)
-       
+        let buttons = document.querySelectorAll("li button")
+        buttons.forEach(b => {
+            if (b.dataset.id == thingId) {
+                b.parentElement.remove()
+                
+            }
+        })
     })
 
 }
@@ -209,22 +218,14 @@ function createThing(e) {
         
         main.innerHTML += `
             <li>${thing.description}
-            - <button id="delete-thing" data-id="${thing.id}">Remove</button>
-
+            - <button class="delete-thing" data-id="${thing.id}">Remove</button>
             </li>
-            </div>
-            <br>
         `
-        attachClicksToLinks()
         clearThingForm()
         attachClicksToButtons()
         //document.getElementById('delete-thing').addEventListener('click', removeThing)
         document.getElementById('thing-form').addEventListener('click', displayCreateThingForm) 
-        }
-        
+        } 
     )
-    
-    
 }
-
 
