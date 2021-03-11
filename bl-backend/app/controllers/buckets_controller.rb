@@ -20,7 +20,7 @@ class BucketsController < ApplicationController
     if @bucket.save
       render json: @bucket, status: :created, location: @bucket
     else
-      render json: @bucket.errors, status: :unprocessable_entity
+      render json: {errors: @bucket.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

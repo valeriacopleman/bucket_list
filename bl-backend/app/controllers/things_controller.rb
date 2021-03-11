@@ -15,12 +15,12 @@ class ThingsController < ApplicationController
 
   # POST /things
   def create
-    @thing = Thing.new(thing_params)
+    @thing = Thing.create(thing_params)
 
     if @thing.save
       render json: @thing, status: :created, location: @thing
     else
-      render json: @thing.errors, status: :unprocessable_entity
+      render json: {errors: @thing.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
