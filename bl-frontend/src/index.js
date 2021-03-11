@@ -18,6 +18,7 @@ async function renderBuckets() {
     main.innerHTML += `
             <a href="#" id="bucket-form">+Create a Bucket List</a>
             <div id="bucket-form"></div>
+            <br>
             `
     buckets.map(bucket => {
         const newBucket = new Bucket(bucket)
@@ -88,8 +89,9 @@ async function displayBucket(e) {
     bucket.things.forEach( thing => {
         main.innerHTML += `
         <li >${thing.description}
-         - <button class="delete-thing" data-id="${thing.id}">Remove</button>
+         - <button class="delete-thing" data-bid="${thing.bucket_id}"data-id="${thing.id}">Remove</button>
         </li>
+        <br>
         `  
     })
     attachClicksToButtons()
@@ -105,27 +107,24 @@ async function removeBucket(e) {
     })
 }
 
-function removeThing(e) {
-    console.log(e.target)
-    let thingId = e.target.dataset.id
-    let configObj = {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    }
-    fetch(BASE_URL + `/things/${thingId}`, configObj)
-    .then(() => {
-        let buttons = document.querySelectorAll("li button")
-        buttons.forEach(b => {
-            if (b.dataset.id == thingId) {
-                b.parentElement.remove()
-                
-            }
-        })
+async function removeThing(e) {
+    let bid = e.target.dataset.bid
+    let id = e.target.dataset.id
+    
+    const data = await apiService.fetchRemoveThing(id)
+    const dat = await apiService.fetchBucket(bid)
+    const bucket = new Bucket(dat)
+    main.innerHTML = bucket.renderBucket()
+    bucket.things.forEach( thing => {
+        main.innerHTML += `
+        <li >${thing.description}
+         - <button class="delete-thing" data-bid="${thing.bucket_id}"data-id="${thing.id}">Remove</button>
+        </li>
+        <br>
+        `  
     })
-
+    attachClicksToButtons()
+    document.getElementById('thing-form').addEventListener('click', displayCreateThingForm)
 }
 
 function displayCreateThingForm(e) {
@@ -174,8 +173,9 @@ function createThing(e) {
         
         main.innerHTML += `
             <li>${thing.description}
-            - <button class="delete-thing" data-id="${thing.id}">Remove</button>
+            - <button class="delete-thing" data-bid="${thing.bucket_id}" data-id="${thing.id}">Remove</button>
             </li>
+            <br>
         `
         clearThingForm()
         attachClicksToButtons()
@@ -183,6 +183,7 @@ function createThing(e) {
         } 
     )
 }
+
 
 init() 
 

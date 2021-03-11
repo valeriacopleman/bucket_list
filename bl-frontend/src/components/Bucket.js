@@ -11,6 +11,7 @@ class Bucket {
             <a href="#" data-id="${this.id}">${this.name}</a>
             - <button class="delete-bucket" data-id="${this.id}">Delete List</button>
         </li>
+        <br>
         `
     }
 

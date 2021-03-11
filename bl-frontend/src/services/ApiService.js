@@ -39,5 +39,16 @@ class ApiService {
         }
         let res = await fetch(this.baseURL + `/buckets/${id}`, configObj)
     }
+
+    async fetchRemoveThing(id) {
+        let configObj = {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }
+        let res = await fetch(this.baseURL + `/things/${id}`, configObj)
+    }
 }
 
