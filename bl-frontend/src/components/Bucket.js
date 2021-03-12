@@ -1,11 +1,12 @@
 class Bucket {
+    
     constructor(data){
         this.id = data.id 
         this.name = data.name 
         this.things = data.things
     }
 
-    render() {
+    renderList() {
         return `
         <li>
             <a href="#" data-id="${this.id}">${this.name}</a>

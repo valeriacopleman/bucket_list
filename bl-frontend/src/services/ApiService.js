@@ -1,6 +1,12 @@
 class ApiService {
+
     constructor() {
         this.baseURL = 'http://localhost:3000'
+    }
+
+    static headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
     }
 
     async fetchBuckets() {
@@ -19,10 +25,7 @@ class ApiService {
         let configObj = {
             method: 'POST',
             body: JSON.stringify(bucketData),
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
+            headers: ApiService.headers
         }
         let res = await fetch(this.baseURL + `/buckets`, configObj)
         let data = await res.json()
@@ -32,23 +35,29 @@ class ApiService {
     async fetchRemoveBucket(id) {
         let configObj = {
             method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
+            headers: ApiService.headers
         }
-        let res = await fetch(this.baseURL + `/buckets/${id}`, configObj)
+        await fetch(this.baseURL + `/buckets/${id}`, configObj)
+    }
+
+    async fetchCreateThing(thingData) {
+        let configObj = {
+            method: 'POST',
+            body: JSON.stringify(thingData),
+            headers: ApiService.headers
+        }
+    
+        let res = await fetch(this.baseURL + `/things`, configObj)
+        let data = await res.json()
+        return data
+
     }
 
     async fetchRemoveThing(id) {
         let configObj = {
             method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
+            headers: ApiService.headers
         }
-        let res = await fetch(this.baseURL + `/things/${id}`, configObj)
+        await fetch(this.baseURL + `/things/${id}`, configObj)
     }
 }
-
