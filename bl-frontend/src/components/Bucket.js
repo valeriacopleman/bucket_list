@@ -1,5 +1,5 @@
 class Bucket {
-    
+
     constructor(data){
         this.id = data.id 
         this.name = data.name 
@@ -18,8 +18,8 @@ class Bucket {
 
     renderBucket() {
         return `
-        <h3>${this.name}:</h3>
-        
+        ...${this.name}...
+        <br>
         <br>
         <a href="#" id="thing-form" data-id="${this.id}">+Add to List</a>
         <div id="thing-form"></div>
