@@ -9,7 +9,7 @@ class Thing {
     renderThing() {
         return `
         <li >${this.description}
-         - <button class="delete-thing" data-bid="${this.bucket_id}"data-id="${this.id}">Remove</button>
+         - <span class="w3-button w3-black"><a class="delete-thing" data-bid="${this.bucket_id}" data-id="${this.id}">x</a></span>
         </li>
         <br>
         `  
