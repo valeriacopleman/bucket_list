@@ -11,6 +11,7 @@ class ApiService {
 
     async fetchBuckets() {
         let res = await fetch(this.baseURL + '/buckets')
+        console.log(1)
         let data = await res.json()
         return data
     }

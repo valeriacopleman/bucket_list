@@ -1,18 +1,19 @@
 const apiService = new ApiService() 
 let main = document.getElementById('main')
-
-const init = () => {
+init() 
+function init() {
   bindEventListener()
   renderBuckets()
 }
 
 function bindEventListener() {
   document.getElementById('buckets').addEventListener('click', renderBuckets)
+  document.querySelector('form').addEventListener('submit', searchLetter)
 }
 
 function bucketEventListeners() {
-  let buckets = document.querySelectorAll("li a")
-  buckets.forEach(bucket => {
+  let buckets = document.querySelectorAll("li a:first-child")
+  buckets.forEach(bucket => { 
     bucket.addEventListener('click', displayBucket)
   })
 
@@ -35,6 +36,7 @@ function thingsEventListeners() {
 
 async function renderBuckets() {
   const bucketData = await apiService.fetchBuckets()
+  console.log(2)
   main.innerHTML = ""
   main.innerHTML += `
     <a href="#" id="bucket-form">+Create a Bucket List</a>
@@ -89,7 +91,7 @@ async function displayBucket(e) {
 }
 
 async function removeBucket(e) {
-  let id = e.target.dataset.id
+  let id = e.target.parentElement.dataset.id
   const data = await apiService.fetchRemoveBucket(id)
   .then(data => {
       renderBuckets()
@@ -97,8 +99,8 @@ async function removeBucket(e) {
 }
 
 async function removeThing(e) {
-  let bid = e.target.dataset.bid
-  let id = e.target.dataset.id
+  let bid = e.target.parentElement.dataset.bid
+  let id = e.target.parentElement.dataset.id
   await apiService.fetchRemoveThing(id)
   const data = await apiService.fetchBucket(bid)
   const bucket = new Bucket(data)
@@ -142,4 +144,54 @@ async function createThing(e) {
   thingsEventListeners()
 }
 
-init() 
+
+async function searchLetter(letter) {
+
+  //bucketData.map(bucket => {
+    //const newBucket = new Bucket(bucket)
+   
+  //let searchResult = newBucket.filter(newBuckets => {
+    //newBuckets.toLowerCase().includes(a)
+  //)
+    //main.innerHTML += newBucket.renderList()
+  //})
+  //bucketData.filter(bucket => {
+    //const newBucket = new Bucket(bucket)
+    //const found = bucket.includes(a)
+    //main.innerHTML += found.renderList()
+  //})
+  //const newBucket = new Bucket(bucket)
+  //let foundBuckets = []
+  //bucketData.map(bucket => {
+    //const newBucket = new Bucket(bucket)
+    //foundBuckets = newbucket
+  //})
+  
+  //const searchForm = document.querySelector('.searchEng')
+    //console.log(bucketData)
+    //const x = a
+    const bucketData = await apiService.fetchBuckets()
+ //debugger
+    //let newBucket = new Bucket(data)
+    //const found = []
+    //bucketData.map(bucket => {
+    // const newBucket = new Bucket(bucket)
+    // found.push(newBucket)
+    
+    
+    const found = bucketData.filter(bucket => bucket.name.toLowerCase().includes())
+    
+    found.map(bucket => {
+      const newBucket = new Bucket(bucket)
+      document.querySelector('div#searchEng').innerHTML += newBucket.renderList()
+    })
+    //const arr = newBucket.filter(bucket => 
+      //bucket.name.includes(`${a}`))
+      //console.log(arr.renderList())
+    //const found = newBucket.filter(buc => buc.includes(a))
+
+  
+
+    
+ 
+}

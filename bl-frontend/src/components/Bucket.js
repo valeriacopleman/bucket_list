@@ -10,7 +10,7 @@ class Bucket {
         return `
         <li>
             <a href="#" data-id="${this.id}">${this.name}</a>
-            - <span class="w3-button w3-black"><a class="delete-bucket" data-id="${this.id}">x</a></span>
+            - <a class="delete-bucket" data-id="${this.id}"><span class="w3-button w3-black">x</span></a>
         </li>
         <br>
         `
