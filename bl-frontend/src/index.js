@@ -147,50 +147,15 @@ async function createThing(e) {
 
 async function searchLetter(e) {
 
-  //bucketData.map(bucket => {
-    //const newBucket = new Bucket(bucket)
-   
-  //let searchResult = newBucket.filter(newBuckets => {
-    //newBuckets.toLowerCase().includes(a)
-  //)
-    //main.innerHTML += newBucket.renderList()
-  //})
-  //bucketData.filter(bucket => {
-    //const newBucket = new Bucket(bucket)
-    //const found = bucket.includes(a)
-    //main.innerHTML += found.renderList()
-  //})
-  //const newBucket = new Bucket(bucket)
-  //let foundBuckets = []
-  //bucketData.map(bucket => {
-    //const newBucket = new Bucket(bucket)
-    //foundBuckets = newbucket
-  //})
-  
-  //const searchForm = document.querySelector('.searchEng')
-    //console.log(bucketData)
-    //const x = a
     const searchString = e.target.a.value
     const bucketData = await apiService.fetchBuckets()
- //debugger
-    //let newBucket = new Bucket(data)
-    //const found = []
-    //bucketData.map(bucket => {
-    // const newBucket = new Bucket(bucket)
-    // found.push(newBucket)
-    
-    
+ 
     const found = bucketData.filter(bucket => bucket.name.toLowerCase().includes(searchString))
     
     found.map(bucket => {
       const newBucket = new Bucket(bucket)
       document.querySelector('div#searchEng').innerHTML += newBucket.renderList()
     })
-    //const arr = newBucket.filter(bucket => 
-      //bucket.name.includes(`${a}`))
-      //console.log(arr.renderList())
-    //const found = newBucket.filter(buc => buc.includes(a))
-
   
 
     
