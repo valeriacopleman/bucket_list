@@ -145,7 +145,7 @@ async function createThing(e) {
 }
 
 
-async function searchLetter(letter) {
+async function searchLetter(e) {
 
   //bucketData.map(bucket => {
     //const newBucket = new Bucket(bucket)
@@ -170,6 +170,7 @@ async function searchLetter(letter) {
   //const searchForm = document.querySelector('.searchEng')
     //console.log(bucketData)
     //const x = a
+    const searchString = e.target.a.value
     const bucketData = await apiService.fetchBuckets()
  //debugger
     //let newBucket = new Bucket(data)
@@ -179,7 +180,7 @@ async function searchLetter(letter) {
     // found.push(newBucket)
     
     
-    const found = bucketData.filter(bucket => bucket.name.toLowerCase().includes())
+    const found = bucketData.filter(bucket => bucket.name.toLowerCase().includes(searchString))
     
     found.map(bucket => {
       const newBucket = new Bucket(bucket)
